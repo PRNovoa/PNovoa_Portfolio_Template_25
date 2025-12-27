@@ -1,1 +1,265 @@
 @import "tailwindcss";
+
+/* ========================================
+   VARIABLES CSS
+   ======================================== */
+
+:root {
+  --header-height-mobile: 64px; /* 16 * 4 = 64px (h-16 en Tailwind) */
+  --header-height-desktop: 80px; /* 20 * 4 = 80px (h-20 en Tailwind) */
+}
+
+/* ========================================
+   GLASSMORPHISM UTILITIES
+   ======================================== */
+
+/* Glass base - para paneles y cards */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  }
+
+  .dark .glass {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  /* Glass para navegación (más transparente) */
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.1);
+  }
+
+  .dark .glass-nav {
+    background: rgba(15, 23, 42, 0.8);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Glass para cards (más definido) */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .dark .glass-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+  }
+
+  .dark .glass-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  /* Glass para botones */
+  .glass-button {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .dark .glass-button {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+  }
+
+  /* Parallax layers (preparado para GSAP) */
+  [data-parallax] {
+    will-change: transform;
+  }
+
+/* Deshabilitar parallax si el usuario prefiere movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  [data-parallax] {
+    transform: none !important;
+    will-change: auto;
+  }
+}
+
+/* ========================================
+   NAVIGATION STYLES
+   ======================================== */
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  color: rgb(51, 65, 85);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.dark .nav-link {
+  color: rgb(203, 213, 225);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, rgb(147, 51, 234), rgb(59, 130, 246));
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+  color: rgb(147, 51, 234);
+}
+
+.dark .nav-link:hover,
+.dark .nav-link[aria-current="page"] {
+  color: rgb(192, 132, 252);
+}
+
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after {
+  width: 100%;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgb(51, 65, 85);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.dark .mobile-nav-link {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: rgb(203, 213, 225);
+}
+
+.mobile-nav-link:hover {
+  color: rgb(147, 51, 234);
+  transform: translateY(-2px);
+}
+
+.dark .mobile-nav-link:hover {
+  color: rgb(192, 132, 252);
+}
+
+/* ========================================
+   SCROLL SNAP (solo en HOME)
+   Aplicado al .snap-container con scroll oculto
+   ======================================== */
+
+/* Ocultar scroll del body cuando hay snap activo */
+body.snap-enabled {
+  overflow: hidden;
+  height: 100svh;
+}
+
+.snap-container {
+  width: 100%;
+  height: 100svh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height-mobile);
+  
+  /* Ocultar scrollbar pero mantener funcionalidad */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.snap-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+@media (min-width: 768px) {
+  .snap-container {
+    scroll-padding-top: var(--header-height-desktop);
+  }
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100svh;
+  width: 100%;
+}
+
+/* ========================================
+   GRADIENT BACKGROUNDS
+   ======================================== */
+
+.gradient-purple-blue {
+  background: linear-gradient(135deg, 
+    rgba(139, 92, 246, 0.1) 0%, 
+    rgba(59, 130, 246, 0.1) 100%
+  );
+}
+
+.dark .gradient-purple-blue {
+  background: linear-gradient(135deg, 
+    rgba(139, 92, 246, 0.2) 0%, 
+    rgba(59, 130, 246, 0.2) 100%
+  );
+}
+
+/* Blob animations para parallax */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  pointer-events: none; /* No interferir con clicks */
+}
+
+.dark .blob {
+  mix-blend-mode: screen;
+}
+
+/* ========================================
+   UTILITIES
+   ======================================== */
+
+/* Focus visible para accesibilidad */
+.focus-visible\:ring-2:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(147, 51, 234, 0.5);
+}
+
+/* Smooth scroll indicator */
+.scroll-indicator {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
