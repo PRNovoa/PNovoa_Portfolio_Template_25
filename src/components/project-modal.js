@@ -18,7 +18,7 @@ export class ProjectModal {
 
   async init() {
     // Load template
-    const response = await fetch(`${import.meta.env.BASE_URL}src/components/templates/project-modal.html`);
+    const response = await fetch(`${import.meta.env.BASE_URL}templates/project-modal.html`);
     const html = await response.text();
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');

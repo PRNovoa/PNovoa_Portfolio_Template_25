@@ -17,7 +17,7 @@ export class AboutCVModal {
 
   async init() {
     // Load template
-    const response = await fetch(`${import.meta.env.BASE_URL}src/components/templates/about-cv-modal.html`);
+    const response = await fetch(`${import.meta.env.BASE_URL}templates/about-cv-modal.html`);
     const html = await response.text();
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');

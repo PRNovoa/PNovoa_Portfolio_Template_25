@@ -32,7 +32,7 @@ async function initI18n() {
   const container = document.getElementById('language-selector-container');
   if (container) {
     // Cargar template del selector
-    const response = await fetch(`${import.meta.env.BASE_URL}src/i18n/templates/language-selector.html`);
+    const response = await fetch(`${import.meta.env.BASE_URL}templates/language-selector.html`);
     const html = await response.text();
     const doc = new DOMParser().parseFromString(html, 'text/html');
     const template = doc.querySelector('template');
