@@ -1,0 +1,51 @@
+<template id="language-selector">
+  <div class="language-selector relative">
+    <button 
+      id="lang-selector-button"
+      type="button"
+      class="flex items-center gap-2 px-3 py-2 rounded-lg glass-button hover:scale-105 transition-all"
+      aria-label="Cambiar idioma / Change language"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #01CDFE;">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+      </svg>
+      <span id="lang-selector-label" class="font-medium" style="color: #F7F3FF;">ES</span>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #C9C1D9;">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div 
+      id="lang-selector-menu"
+      class="absolute right-0 mt-2 w-40 glass-card rounded-lg shadow-xl hidden"
+      role="menu"
+      style="z-index: 100; box-shadow: 0 0 30px rgba(1, 205, 254, 0.3);"
+    >
+      <button 
+        type="button"
+        data-lang="es"
+        class="lang-option w-full text-left px-4 py-3 hover:bg-white/10 transition-colors rounded-t-lg flex items-center justify-between"
+        role="menuitem"
+      >
+        <span style="color: #F7F3FF;"><span style="font-size: 0.75rem; opacity: 0.8;">ES</span> Español</span>
+        <svg class="w-5 h-5 lang-check hidden" fill="currentColor" viewBox="0 0 20 20" style="color: #01CDFE;">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <button 
+        type="button"
+        data-lang="en"
+        class="lang-option w-full text-left px-4 py-3 hover:bg-white/10 transition-colors rounded-b-lg flex items-center justify-between"
+        role="menuitem"
+      >
+        <span style="color: #F7F3FF;"><span style="font-size: 0.75rem; opacity: 0.8;">EN</span> English</span>
+        <svg class="w-5 h-5 lang-check hidden" fill="currentColor" viewBox="0 0 20 20" style="color: #01CDFE;">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,438 @@
+{
+  "meta": {
+    "title": "Your Name - Portfolio",
+    "description": "Professional Portfolio - Showcase your work and skills"
+  },
+  "config": {
+    "personal": {
+      "name": "Your Full Name",
+      "title": "Your Profession",
+      "subtitle": "Your Specialization",
+      "email": "your@email.com",
+      "github_user": "your-username",
+      "github_url": "https://github.com/your-username",
+      "linkedin_name": "Your Name",
+      "linkedin_url": "https://linkedin.com/in/your-username",
+      "location": "Your City, Country"
+    },
+    "skills": {
+      "category1": {
+        "name": "Main Skills",
+        "icon": "target",
+        "items": [
+          { "name": "Skill 1", "level": 95 },
+          { "name": "Skill 2", "level": 90 },
+          { "name": "Skill 3", "level": 88 },
+          { "name": "Skill 4", "level": 85 }
+        ]
+      },
+      "category2": {
+        "name": "Tools & Software",
+        "icon": "tool",
+        "items": [
+          "Tool 1",
+          "Tool 2",
+          "Tool 3",
+          "Tool 4",
+          "Tool 5",
+          "Tool 6"
+        ]
+      }
+    },
+    "projects": {
+      "icons": ["rocket", "briefcase", "palette", "shopping", "mobile", "document"]
+    }
+  },
+  "guides": {
+    "hero": {
+      "name": "Your full name",
+      "title": "Your professional title",
+      "subtitle": "Your specialization",
+      "description": "Write a sentence describing what you do"
+    },
+    "about": {
+      "subtitle": "A brief summary of your professional profile",
+      "intro": "Write who you are and what you do",
+      "text1": "Your experience and education",
+      "text2": "Your tools and methodologies",
+      "text3": "Your interests and professional values"
+    },
+    "skills": {
+      "category1": "First skills category",
+      "category2": "Second skills category",
+      "items": "List of skills"
+    },
+    "experience": {
+      "title": "Position title or role",
+      "company": "Company name",
+      "description": "Main responsibilities and achievements"
+    },
+    "projects": {
+      "title": "Project name",
+      "description": "Brief project description",
+      "tags": "Technologies used"
+    },
+    "contact": {
+      "email": "Your professional email",
+      "github": "Your GitHub username",
+      "linkedin": "Your LinkedIn profile",
+      "location": "Your location",
+      "availability": "Your current availability"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "menu": "Navigation menu"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "home": {
+    "hero": {
+      "title": "Your Full Name",
+      "subtitle": "Your Profession • Your Specialization",
+      "description": "An impactful sentence that summarizes your value proposition and what you do",
+      "cta_projects": "View Projects",
+      "cta_contact": "Contact"
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "subtitle": "Showcase your best 3 works or recent achievements",
+      "view_all": "View all projects"
+    },
+    "project1": {
+      "title": "Project Name 1",
+      "description": "Brief and attractive project description. Highlight the main impact or result",
+      "tech1": "Technology 1",
+      "tech2": "Technology 2",
+      "tech3": "Technology 3"
+    },
+    "project2": {
+      "title": "Project Name 2",
+      "description": "Another important project. Mention the problem solved or value provided",
+      "tech1": "Tool A",
+      "tech2": "Tool B",
+      "tech3": "Tool C"
+    },
+    "project3": {
+      "title": "Project Name 3",
+      "description": "Third featured project. Focus on what makes you different or special",
+      "tech1": "Skill 1",
+      "tech2": "Skill 2",
+      "tech3": "Skill 3"
+    },
+    "buttons": {
+      "view": "View More",
+      "demo": "Demo/Link"
+    },
+    "about_teaser": {
+      "title": "About Me",
+      "cta": "Learn More"
+    },
+    "contact_teaser": {
+      "title": "Let's Work Together?",
+      "text": "Write a message inviting to contact you. Mention your availability or types of projects you're looking for",
+      "cta": "Send Message"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Subtitle that captures your professional and personal essence",
+    "intro": "Write 2-3 paragraphs about yourself. Explain who you are, what you do and why you're passionate about your work.",
+    "text1": "Mention your experience, education or relevant achievements. Show your personality and professional values.",
+    "text2": "Detail your main skills, tools you master, or methodologies you work with. Show your practical experience.",
+    "text3": "Share your interests, professional values or what motivates you. Mention activities related to your professional development or passions.",
+    "cv": {
+      "button": "View Full CV",
+      "modal": {
+        "title": "Curriculum Vitae",
+        "languages": {
+          "title": "Languages",
+          "lang1": {
+            "name": "Spanish",
+            "level": "Native"
+          },
+          "lang2": {
+            "name": "English",
+            "level": "Advanced (C1)"
+          },
+          "lang3": {
+            "name": "French",
+            "level": "Intermediate (B1)"
+          }
+        },
+        "softSkills": {
+          "title": "Soft Skills",
+          "skill1": "Creative Thinking",
+          "skill2": "Team Collaboration",
+          "skill3": "Problem Solving",
+          "skill4": "Time Management",
+          "skill5": "Effective Communication",
+          "skill6": "Adaptability"
+        },
+        "interests": {
+          "title": "Interests & Hobbies",
+          "interest1": "Indie game development",
+          "interest2": "Reading sci-fi and technology",
+          "interest3": "Interface design and digital art",
+          "interest4": "Contributing to open source projects",
+          "interest5": "Running and healthy lifestyle"
+        },
+        "contact": {
+          "title": "Contact Information",
+          "email": {
+            "label": "Email",
+            "value": "your@email.com"
+          },
+          "location": {
+            "label": "Location",
+            "value": "Madrid, Spain"
+          },
+          "github": {
+            "label": "GitHub",
+            "value": "github.com/your-username"
+          },
+          "linkedin": {
+            "label": "LinkedIn",
+            "value": "linkedin.com/in/your-username"
+          }
+        }
+      }
+    },
+    "skills": {
+      "title": "Skills and Competencies",
+      "frontend": "Frontend",
+      "tools": "Tools"
+    },
+    "experience": {
+      "title": "Experience / Career Path",
+      "job1": {
+        "title": "Current Position or Role",
+        "period": "Start date - Present",
+        "company": "Company/Organization Name",
+        "description": "Describe your main responsibilities and achievements. Mention highlighted projects, measurable results or impact generated in this role."
+      },
+      "job2": {
+        "title": "Previous Position or Role",
+        "period": "Start date - End date",
+        "company": "Company/Organization Name",
+        "description": "Explain what you did, what you learned and how you contributed. Highlight developed skills or important completed projects."
+      },
+      "job3": {
+        "title": "Education / Training",
+        "period": "Start date - End date",
+        "company": "Educational Institution or Training Center",
+        "description": "Mention your academic education, relevant certifications or specialized courses that complement your professional profile."
+      }
+    },
+    "cta": "Let's Work Together"
+  },
+  "projects": {
+    "title": "My Portfolio",
+    "subtitle": "A selection of my most outstanding works, projects and achievements",
+    "filters": {
+      "all": "All",
+      "react": "React",
+      "vue": "Vue",
+      "vite": "Vite",
+      "css": "CSS"
+    },
+    "buttons": {
+      "details": "View Details",
+      "demo": "View Demo",
+      "github": "GitHub"
+    },
+    "project1": {
+      "title": "Project Name 1",
+      "description": "Briefly describe the project. Mention the problem it solves, the solution it provides or the impact it generates. Keep it to 2-3 lines maximum."
+    },
+    "project2": {
+      "title": "Project Name 2",
+      "description": "Explain what makes this project special. Highlight quantifiable achievements if possible (e.g., \"Increased efficiency by 50%\")."
+    },
+    "project3": {
+      "title": "Project Name 3",
+      "description": "Highlight the most interesting or innovative aspect. Mention the target audience or the context in which it was used."
+    },
+    "project4": {
+      "title": "Project 4",
+      "description": "Continue showing relevant projects. Try to maintain variety in types of projects to show versatility."
+    },
+    "project5": {
+      "title": "Project 5",
+      "description": "You can duplicate or delete cards depending on how many projects you want to show. Recommended: between 6 and 12 projects."
+    },
+    "project6": {
+      "title": "Project 6",
+      "description": "Last example project. Make sure each project shows different aspects of your skills."
+    },
+    "modal": {
+      "close": "Close",
+      "technologies": "Technologies",
+      "features": "Key Features",
+      "challenge": "Challenge",
+      "solution": "Solution",
+      "results": "Results",
+      "view_details": "View Details",
+      "image_alt_prefix": "Project screenshot"
+    },
+    "detailed": {
+      "project1": {
+        "fullDescription": "A modern single-page application portfolio built with Vite and Vanilla JavaScript. Features a custom router, internationalization support, and smooth animations using GSAP. The design follows a glassmorphism aesthetic with a vaporwave color palette.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+        "technologies": ["Vite", "JavaScript ES6+", "Tailwind CSS", "GSAP", "Custom Router", "i18n"],
+        "features": [
+          "Custom hash-based SPA router with lazy loading",
+          "Multi-language support (EN/ES) with dynamic content",
+          "Smooth page transitions and parallax effects",
+          "Responsive design with mobile-first approach",
+          "Glassmorphism UI with neon accents",
+          "SEO-friendly meta tags management"
+        ],
+        "challenge": "Create a portfolio that stands out visually while maintaining excellent performance and accessibility. The main challenge was building a custom router without external dependencies and implementing smooth animations without sacrificing load times.",
+        "solution": "Implemented a lightweight hash-based router with template caching and lazy loading. Used GSAP for performant animations with hardware acceleration. Applied code splitting and optimized assets with Vite's build system.",
+        "results": "Achieved a Lighthouse score of 95+ on all metrics. Page transitions under 100ms. Bundle size under 50KB gzipped. Fully responsive across all devices with WCAG 2.1 AA accessibility compliance."
+      },
+      "project2": {
+        "fullDescription": "A comprehensive task management application featuring drag-and-drop functionality, advanced filtering, and local storage persistence. Built with React and TypeScript for type safety and scalability.",
+        "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
+        "technologies": ["React 18", "TypeScript", "React DnD", "LocalStorage API", "CSS Modules", "Framer Motion"],
+        "features": [
+          "Intuitive drag-and-drop interface for task organization",
+          "Multiple views: list, board, and calendar",
+          "Advanced filtering and search functionality",
+          "Task priorities, tags, and due dates",
+          "Local storage with automatic sync",
+          "Dark mode support"
+        ],
+        "challenge": "Creating a fluid drag-and-drop experience that works seamlessly on both desktop and mobile devices while maintaining data consistency.",
+        "solution": "Leveraged React DnD for desktop interactions and implemented custom touch handlers for mobile. Created a robust state management system with automatic debounced saves to localStorage.",
+        "results": "Users reported 40% increase in task completion rates. Average session time of 15 minutes. Zero data loss incidents in production. 4.8/5 user satisfaction rating."
+      },
+      "project3": {
+        "fullDescription": "A complete design system with reusable UI components documented in Storybook. Built with Vue 3 Composition API and fully accessible following WCAG 2.1 guidelines. Includes over 50 components with variants and theming support.",
+        "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
+        "technologies": ["Vue 3", "Storybook 7", "SCSS", "TypeScript", "Vite", "Accessibility Tools"],
+        "features": [
+          "50+ reusable and composable components",
+          "Comprehensive documentation with live examples",
+          "Full keyboard navigation support",
+          "Screen reader compatibility",
+          "Customizable theming system",
+          "Automated accessibility testing"
+        ],
+        "challenge": "Building a design system that is both flexible enough for various use cases and consistent across all implementations while ensuring full accessibility.",
+        "solution": "Created a token-based design system with CSS custom properties for theming. Implemented comprehensive ARIA labels and keyboard interactions. Set up automated a11y testing in CI/CD pipeline.",
+        "results": "Reduced development time for new features by 60%. Achieved WCAG 2.1 AA compliance across all components. Adopted by 5 internal teams with 95% satisfaction rate."
+      },
+      "project4": {
+        "fullDescription": "A modern e-commerce interface with shopping cart functionality, advanced product filtering, and Stripe payment integration. Features real-time inventory updates and order tracking.",
+        "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=600&fit=crop",
+        "technologies": ["React", "Context API", "Stripe API", "React Router", "Axios", "Styled Components"],
+        "features": [
+          "Dynamic shopping cart with real-time updates",
+          "Advanced filtering by category, price, and ratings",
+          "Secure checkout with Stripe integration",
+          "Order history and tracking",
+          "Wishlist functionality",
+          "Responsive product gallery with zoom"
+        ],
+        "challenge": "Implementing a secure payment flow while maintaining a smooth user experience and handling complex state management for cart and checkout processes.",
+        "solution": "Used Context API for global state management with optimized re-renders. Implemented Stripe Elements for PCI-compliant payment processing. Added optimistic UI updates for better perceived performance.",
+        "results": "Payment success rate of 98.5%. Average checkout time reduced to under 2 minutes. Cart abandonment rate decreased by 35%. Mobile conversion rate increased by 45%."
+      },
+      "project5": {
+        "fullDescription": "A weather forecast application with geolocation support, 7-day forecasts, and interactive charts. Features auto-location detection, favorite locations, and weather alerts. Built with a mobile-first approach.",
+        "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
+        "technologies": ["React", "OpenWeather API", "Chart.js", "Geolocation API", "PWA", "Service Workers"],
+        "features": [
+          "Real-time weather data with hourly updates",
+          "7-day forecast with detailed metrics",
+          "Interactive temperature and precipitation charts",
+          "Geolocation with favorite locations",
+          "Weather alerts and notifications",
+          "Offline support with cached data"
+        ],
+        "challenge": "Providing accurate weather information with fast load times while working with external API rate limits and ensuring offline functionality.",
+        "solution": "Implemented intelligent caching strategy with Service Workers. Used request debouncing and data prefetching for predicted user actions. Created fallback mechanisms for API failures.",
+        "results": "Average load time under 1.5 seconds. 90% of data served from cache. PWA installable on mobile devices. 4.6/5 user rating with over 10k downloads."
+      },
+      "project6": {
+        "fullDescription": "A full-featured blog platform with Markdown editor, category management, and advanced search. Optimized for SEO with meta tags, structured data, and reading time estimates. Features a clean reading mode and social sharing.",
+        "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop",
+        "technologies": ["Vue 3", "Markdown-it", "Vite", "Vue Router", "Pinia", "Meta Tags API"],
+        "features": [
+          "Rich Markdown editor with live preview",
+          "Category and tag management",
+          "Full-text search with filters",
+          "Reading mode with typography optimization",
+          "Social media sharing with Open Graph",
+          "SEO optimization with meta tags and structured data"
+        ],
+        "challenge": "Creating a blog platform that is both writer-friendly and SEO-optimized while maintaining fast page loads and good user experience.",
+        "solution": "Implemented static site generation for blog posts with dynamic imports. Added comprehensive meta tag management per post. Created a custom Markdown renderer with syntax highlighting and lazy image loading.",
+        "results": "Organic traffic increased by 180% in 3 months. Average page load time of 1.2 seconds. Blog posts ranking on first page of Google for target keywords. 65% increase in social shares."
+      }
+    },
+    "cta_text": "Do you have a project in mind? Want to collaborate?",
+    "cta_button": "Let's Talk"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Do you have a project in mind? Let's talk",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "github": "GitHub / Social Network",
+      "linkedin": "LinkedIn",
+      "location": "Location",
+      "location_value": "Madrid, Spain"
+    },
+    "availability": {
+      "title": "Availability",
+      "status": "Available for new projects",
+      "response": "Current availability status. Estimated response time."
+    },
+    "form": {
+      "title": "Send Message",
+      "name": "Name",
+      "name_placeholder": "Your name",
+      "email": "Email",
+      "email_placeholder": "your@email.com",
+      "subject": "Subject",
+      "subject_placeholder": "How can I help you?",
+      "message": "Message",
+      "message_placeholder": "Tell me about your project...",
+      "submit": "Send Message",
+      "note": "Note: This form requires backend configuration. For now, use the direct email above.",
+      "success": "Message sent! I'll reply soon.",
+      "error": "There was an error. Please use the direct email.",
+      "validation": {
+        "name_required": "Please enter your name",
+        "email_required": "Please enter your email",
+        "email_invalid": "Please enter a valid email",
+        "subject_required": "Please enter a subject",
+        "message_required": "Please write a message"
+      }
+    }
+  },
+  "error_404": {
+    "title": "404",
+    "subtitle": "Page Not Found",
+    "description": "Sorry, the page you're looking for doesn't exist or has been moved.",
+    "cta_home": "Back to Home",
+    "cta_projects": "View Projects",
+    "help": "Need help?",
+    "contact_link": "Contact Me"
+  },
+  "language_selector": {
+    "label": "Language",
+    "spanish": "Español",
+    "english": "English"
+  }
+}

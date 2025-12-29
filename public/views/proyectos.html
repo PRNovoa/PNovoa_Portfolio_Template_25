@@ -4,76 +4,67 @@
       
       <!-- Header -->
       <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">Mis Proyectos</h1>
-        <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+        <h1 class="text-fluid-h1 font-bold mb-4" style="color: #F7F3FF;" data-i18n="projects.title">Mis Proyectos</h1>
+        <p class="text-fluid-body-lg max-w-2xl mx-auto" style="color: #C9C1D9;" data-i18n="projects.subtitle">
           Una selección de mis trabajos más recientes en desarrollo web
         </p>
       </div>
 
-      <!-- Filters (opcional - preparado para futura funcionalidad) -->
-      <div class="flex flex-wrap justify-center gap-3 mb-12">
-        <button class="px-6 py-2 rounded-full bg-purple-600 text-white font-medium">Todos</button>
-        <button class="px-6 py-2 rounded-full glass-button font-medium hover:scale-105 transition-transform">React</button>
-        <button class="px-6 py-2 rounded-full glass-button font-medium hover:scale-105 transition-transform">Vue</button>
-        <button class="px-6 py-2 rounded-full glass-button font-medium hover:scale-105 transition-transform">Vite</button>
-        <button class="px-6 py-2 rounded-full glass-button font-medium hover:scale-105 transition-transform">CSS</button>
-      </div>
-
       <!-- Projects Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
         
         <!-- Project 1 -->
-        <article class="glass-card rounded-2xl overflow-hidden group">
-          <div class="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center overflow-hidden">
-            <span class="text-white text-6xl group-hover:scale-110 transition-transform">🚀</span>
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col h-full group cursor-pointer hover:scale-[1.02] transition-transform" data-project-id="project1">
+          <div class="aspect-video flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #FF71CE 0%, #B967FF 100%); box-shadow: inset 0 0 40px rgba(255, 113, 206, 0.3);">
+            <span class="text-white text-6xl group-hover:scale-110 transition-transform" style="filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));">🚀</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-2xl font-bold mb-2 transition-colors" style="color: #F7F3FF;" data-i18n="projects.project1.title">
               Portfolio SPA
             </h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-4">
+            <p class="mb-4" style="color: #C9C1D9;" data-i18n="projects.project1.description">
               Portfolio interactivo con Vite, Tailwind CSS y router custom. Incluye animaciones con GSAP y dark mode.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 text-xs rounded-full glass-button">Vite</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">Tailwind</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">GSAP</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">SPA</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">Vite</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">Tailwind</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">GSAP</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">SPA</span>
             </div>
-            <div class="flex gap-3">
-              <a href="https://github.com/tu-usuario/portfolio" target="_blank" rel="noopener" class="flex-1 text-center py-2 glass-button rounded-lg hover:scale-105 transition-transform font-medium">
-                GitHub
+            <div class="flex gap-3 mt-auto">
+              <a href="https://github.com/tu-usuario/portfolio" target="_blank" rel="noopener" class="flex-1 text-center py-2 glass-button rounded-lg hover:scale-105 transition-transform font-medium" style="color: #C9C1D9;">
+                <span data-i18n="projects.buttons.github">GitHub</span>
               </a>
-              <a href="https://portfolio.demo" target="_blank" rel="noopener" class="flex-1 text-center py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium">
-                Ver Demo
+              <a href="https://portfolio.demo" target="_blank" rel="noopener" class="flex-1 text-center py-2 text-white rounded-lg transition-all font-medium" style="background: linear-gradient(to right, #FF71CE, #B967FF); box-shadow: 0 0 15px rgba(255, 113, 206, 0.4);">
+                <span data-i18n="projects.buttons.demo">Ver Demo</span>
               </a>
             </div>
           </div>
         </article>
 
         <!-- Project 2 -->
-        <article class="glass-card rounded-2xl overflow-hidden group">
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col h-full group cursor-pointer hover:scale-[1.02] transition-transform" data-project-id="project2">
           <div class="aspect-video bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center overflow-hidden">
             <span class="text-white text-6xl group-hover:scale-110 transition-transform">💼</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-2xl font-bold mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors" data-i18n="projects.project2.title">
               Task Manager
             </h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-4">
+            <p class="text-slate-600 dark:text-slate-400 mb-4" data-i18n="projects.project2.description">
               Aplicación de gestión de tareas con drag & drop, filtros y persistencia local. UI moderna con animaciones.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 text-xs rounded-full glass-button">React</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">TypeScript</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">LocalStorage</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">React</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">TypeScript</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">API</span>
               <span class="px-3 py-1 text-xs rounded-full glass-button">DnD</span>
             </div>
-            <div class="flex gap-3">
-              <a href="https://github.com/tu-usuario/task-manager" target="_blank" rel="noopener" class="flex-1 text-center py-2 glass-button rounded-lg hover:scale-105 transition-transform font-medium">
+            <div class="flex gap-3 mt-auto">
+              <a href="https://github.com/tu-usuario/weather-app" target="_blank" rel="noopener" class="flex-1 text-center py-2 glass-button rounded-lg hover:scale-105 transition-transform font-medium" style="color: #C9C1D9;">
                 GitHub
               </a>
-              <a href="https://task-manager.demo" target="_blank" rel="noopener" class="flex-1 text-center py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium">
+              <a href="https://weather-app.demo" target="_blank" rel="noopener" class="flex-1 text-center py-2 text-white rounded-lg transition-all font-medium" style="background: linear-gradient(to right, #FF71CE, #FFE66D); box-shadow: 0 0 15px rgba(255, 113, 206, 0.4);">
                 Ver Demo
               </a>
             </div>
@@ -81,44 +72,44 @@
         </article>
 
         <!-- Project 3 -->
-        <article class="glass-card rounded-2xl overflow-hidden group">
-          <div class="aspect-video bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center overflow-hidden">
-            <span class="text-white text-6xl group-hover:scale-110 transition-transform">🎨</span>
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col h-full group cursor-pointer hover:scale-[1.02] transition-transform" data-project-id="project3">
+          <div class="aspect-video flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #B967FF 0%, #FF71CE 100%); box-shadow: inset 0 0 40px rgba(185, 103, 255, 0.3);">
+            <span class="text-white text-6xl group-hover:scale-110 transition-transform" style="filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));">🎨</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-              Design System
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-2xl font-bold mb-2 transition-colors" style="color: #F7F3FF;">
+              Diseño UI/UX
             </h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-4">
+            <p class="mb-4" style="color: #C9C1D9;">
               Sistema de diseño completo con componentes reutilizables documentados en Storybook. Accesible y responsive.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 text-xs rounded-full glass-button">Vue 3</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">Storybook</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">SCSS</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">A11y</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">Vue 3</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">Storybook</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">SCSS</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">A11y</span>
             </div>
-            <div class="flex gap-3">
-              <a href="https://github.com/tu-usuario/design-system" target="_blank" rel="noopener" class="flex-1 text-center py-2 glass-button rounded-lg hover:scale-105 transition-transform font-medium">
-                GitHub
+            <div class="flex gap-3 mt-auto">
+              <a href="https://github.com/tu-usuario/design-system" target="_blank" rel="noopener" class="flex-1 text-center py-2 glass-button rounded-lg hover:scale-105 transition-transform font-medium" style="color: #C9C1D9;">
+                <span data-i18n="projects.buttons.github">GitHub</span>
               </a>
-              <a href="https://design-system.demo" target="_blank" rel="noopener" class="flex-1 text-center py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium">
-                Ver Demo
+              <a href="https://design-system.demo" target="_blank" rel="noopener" class="flex-1 text-center py-2 text-white rounded-lg transition-all font-medium" style="background: linear-gradient(to right, #B967FF, #FF71CE); box-shadow: 0 0 15px rgba(185, 103, 255, 0.4);">
+                <span data-i18n="projects.buttons.demo">Ver Demo</span>
               </a>
             </div>
           </div>
         </article>
 
         <!-- Project 4 -->
-        <article class="glass-card rounded-2xl overflow-hidden group">
-          <div class="aspect-video bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center overflow-hidden">
-            <span class="text-white text-6xl group-hover:scale-110 transition-transform">🛒</span>
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col h-full group cursor-pointer hover:scale-[1.02] transition-transform" data-project-id="project4">
+          <div class="aspect-video flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #01CDFE 0%, #FFE66D 100%); box-shadow: inset 0 0 40px rgba(1, 205, 254, 0.3);">
+            <span class="text-white text-6xl group-hover:scale-110 transition-transform" style="filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));">🛍️</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-2xl font-bold mb-2 transition-colors" style="color: #F7F3FF;" data-i18n="projects.project4.title">
               E-commerce UI
             </h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-4">
+            <p class="mb-4" style="color: #C9C1D9;" data-i18n="projects.project4.description">
               Interfaz de e-commerce con carrito de compras, filtros avanzados y checkout. Integración con API de pagos.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
@@ -127,69 +118,70 @@
               <span class="px-3 py-1 text-xs rounded-full glass-button">Stripe</span>
               <span class="px-3 py-1 text-xs rounded-full glass-button">API</span>
             </div>
-              <a href="https://github.com/tu-usuario/ecommerce" target="_blank" rel="noopener" class="flex-1 text-center py-2 glass-button rounded-lg hover:scale-105 transition-transform font-medium">
-                GitHub
+            <div class="flex gap-3 mt-auto">
+              <a href="https://github.com/tu-usuario/ecommerce" target="_blank" rel="noopener" class="flex-1 text-center py-2 glass-button rounded-lg hover:scale-105 transition-transform font-medium" style="color: #C9C1D9;">
+                <span data-i18n="projects.buttons.github">GitHub</span>
               </a>
-              <a href="https://ecommerce.demo" target="_blank" rel="noopener" class="flex-1 text-center py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium">
-                Ver Demo
+              <a href="https://ecommerce.demo" target="_blank" rel="noopener" class="flex-1 text-center py-2 text-white rounded-lg transition-all font-medium" style="background: linear-gradient(to right, #FFE66D, #01CDFE); box-shadow: 0 0 15px rgba(255, 230, 109, 0.4);">
+                <span data-i18n="projects.buttons.demo">Ver Demo</span>
               </a>
             </div>
           </div>
         </article>
 
         <!-- Project 5 -->
-        <article class="glass-card rounded-2xl overflow-hidden group">
-          <div class="aspect-video bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center overflow-hidden">
-            <span class="text-white text-6xl group-hover:scale-110 transition-transform">📱</span>
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col h-full group cursor-pointer hover:scale-[1.02] transition-transform" data-project-id="project5">
+          <div class="aspect-video flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #FFE66D 0%, #FF71CE 100%); box-shadow: inset 0 0 40px rgba(255, 230, 109, 0.3);">
+            <span class="text-white text-6xl group-hover:scale-110 transition-transform" style="filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));">📱</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-2xl font-bold mb-2 transition-colors" style="color: #F7F3FF;" data-i18n="projects.project5.title">
               Weather App
             </h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-4">
+            <p class="mb-4" style="color: #C9C1D9;" data-i18n="projects.project5.description">
               Aplicación del clima con geolocalización, pronóstico de 7 días y gráficos interactivos. Diseño mobile-first.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 text-xs rounded-full glass-button">JavaScript</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">Weather API</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">Chart.js</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">PWA</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">React</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">Context API</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">Stripe</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">API</span>
             </div>
-            <div class="flex gap-3">
-              <a href="https://github.com/tu-usuario/weather-app" target="_blank" rel="noopener" class="flex-1 text-center py-2 glass-button rounded-lg hover:scale-105 transition-transform font-medium">
-                GitHub
+            <div class="flex gap-3 mt-auto">
+              <a href="https://github.com/tu-usuario/weather-app" target="_blank" rel="noopener" class="flex-1 text-center py-2 glass-button rounded-lg hover:scale-105 transition-transform font-medium" style="color: #C9C1D9;">
+                <span data-i18n="projects.buttons.github">GitHub</span>
               </a>
-              <a href="https://weather-app.demo" target="_blank" rel="noopener" class="flex-1 text-center py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium">
-                Ver Demo
+              <a href="https://weather-app.demo" target="_blank" rel="noopener" class="flex-1 text-center py-2 text-white rounded-lg transition-all font-medium" style="background: linear-gradient(to right, #FF71CE, #FFE66D); box-shadow: 0 0 15px rgba(255, 113, 206, 0.4);">
+                <span data-i18n="projects.buttons.demo">Ver Demo</span>
               </a>
             </div>
           </div>
         </article>
 
         <!-- Project 6 -->
-        <article class="glass-card rounded-2xl overflow-hidden group">
-          <div class="aspect-video bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center overflow-hidden">
-            <span class="text-white text-6xl group-hover:scale-110 transition-transform">📝</span>
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col h-full group cursor-pointer hover:scale-[1.02] transition-transform" data-project-id="project6">
+          <div class="aspect-video flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #B967FF 0%, #01CDFE 100%); box-shadow: inset 0 0 40px rgba(185, 103, 255, 0.3);">
+            <span class="text-white text-6xl group-hover:scale-110 transition-transform" style="filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));">📝</span>
           </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-2xl font-bold mb-2 transition-colors" style="color: #F7F3FF;" data-i18n="projects.project6.title">
               Blog Platform
             </h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-4">
+            <p class="mb-4" style="color: #C9C1D9;" data-i18n="projects.project6.description">
               Plataforma de blog con editor Markdown, categorías, búsqueda y modo lectura. Optimizado para SEO.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 text-xs rounded-full glass-button">Vue 3</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">Markdown</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">Vite</span>
-              <span class="px-3 py-1 text-xs rounded-full glass-button">SEO</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">Vue 3</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">Markdown</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">Vite</span>
+              <span class="px-3 py-1 text-xs rounded-full glass-button" style="color: #FFE66D; border-color: rgba(255, 230, 109, 0.3);">SEO</span>
             </div>
-            <div class="flex gap-3">
-              <a href="https://github.com/tu-usuario/blog" target="_blank" rel="noopener" class="flex-1 text-center py-2 glass-button rounded-lg hover:scale-105 transition-transform font-medium">
-                GitHub
+            <div class="flex gap-3 mt-auto">
+              <a href="https://github.com/tu-usuario/blog" target="_blank" rel="noopener" class="flex-1 text-center py-2 glass-button rounded-lg hover:scale-105 transition-transform font-medium" style="color: #C9C1D9;">
+                <span data-i18n="projects.buttons.github">GitHub</span>
               </a>
-              <a href="https://blog.demo" target="_blank" rel="noopener" class="flex-1 text-center py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium">
-                Ver Demo
+              <a href="https://blog.demo" target="_blank" rel="noopener" class="flex-1 text-center py-2 text-white rounded-lg transition-all font-medium" style="background: linear-gradient(to right, #B967FF, #01CDFE); box-shadow: 0 0 15px rgba(185, 103, 255, 0.4);">
+                <span data-i18n="projects.buttons.demo">Ver Demo</span>
               </a>
             </div>
           </div>
@@ -199,11 +191,11 @@
 
       <!-- CTA -->
       <div class="text-center mt-16">
-        <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+        <p class="text-lg mb-6" style="color: #C9C1D9;" data-i18n="projects.cta_text">
           ¿Te gustaría colaborar en un proyecto?
         </p>
-        <a href="#/contact" class="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300">
-          <span>Hablemos</span>
+        <a href="#/contact" class="inline-flex items-center px-8 py-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300" style="background: linear-gradient(to right, #FF71CE, #B967FF); box-shadow: 0 0 30px rgba(255, 113, 206, 0.6);">
+          <span data-i18n="projects.cta_button">Hablemos</span>
           <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
           </svg>

@@ -1,14 +1,20 @@
 /**
- * SimpleRouter - Router SPA con hash routing para GitHub Pages
+ * SimpleRouter - Router SPA con hash routing + i18n para GitHub Pages
  * 
  * PLAN DE ROBUSTEZ (Validado con IA):
- * - Hash-based navigation (#/about, #/projects) compatible con hosting estático
+ * - Hash-based navigation (#/es/about, #/en/projects) compatible con hosting estático
+ * - Soporte multiidioma con prefijo de idioma en URL
  * - Carga lazy de templates desde public/views con BASE_URL dinámico
  * - Cache de templates ya cargados para optimizar rendimiento
  * - Manejo robusto de errores 404
  * - Compatible con Vite base path dinámico (local y GitHub Pages)
  * - Evento route:mounted para re-inicializar componentes por vista
+ * - Sincronización automática entre URL y sistema i18n
  */
+
+import { i18n, t } from './i18n/index.js';
+import { initRenderers } from './i18n/renderer.js';
+
 export class SimpleRouter {
   constructor(routes) {
     this.routes = routes;
@@ -21,20 +27,50 @@ export class SimpleRouter {
   }
 
   async handleRoute() {
-    const hash = window.location.hash.slice(1) || "/";
-    const route = this.routes[hash] || this.routes[404];
+    let hash = window.location.hash.slice(1) || "/";
     
-    if (route !== this.currentView) {
-      try {
-        await this.renderView(route, hash);
-        this.updateActiveNav(hash);
-        this.currentView = route;
-      } catch (error) {
-        console.error('Error rendering view:', error);
-        // Si falla, intentar cargar vista 404
-        if (route !== this.routes[404]) {
-          await this.renderView(this.routes[404], '404');
-        }
+    // Extraer idioma de la URL (#/es/about → es, about)
+    const langMatch = hash.match(/^\/(es|en)\//);
+    let lang = i18n.getLanguage(); // idioma actual
+    let path = hash;
+
+    if (langMatch) {
+      lang = langMatch[1];
+      path = hash.replace(/^\/(es|en)/, ''); // quitar prefijo /es o /en
+      
+      // Sincronizar idioma si es diferente
+      if (lang !== i18n.getLanguage()) {
+        await i18n.setLanguage(lang);
+      }
+    } else {
+      // Si no hay idioma en URL, añadirlo
+      if (hash === '/') {
+        window.location.hash = `#/${lang}/`;
+        return;
+      } else {
+        // Para otras rutas sin idioma
+        window.location.hash = `#/${lang}${hash}`;
+        return;
+      }
+    }
+
+    // Normalizar path
+    if (!path || path === '/') {
+      path = '/';
+    }
+
+    const route = this.routes[path] || this.routes[404];
+    
+    // Renderizar vista (siempre, incluso si es la misma, para actualizar traducciones)
+    try {
+      await this.renderView(route, path);
+      this.updateActiveNav(`/${lang}${path}`);
+      this.currentView = route;
+    } catch (error) {
+      console.error('Error rendering view:', error);
+      // Si falla, intentar cargar vista 404
+      if (route !== this.routes[404]) {
+        await this.renderView(this.routes[404], '404');
       }
     }
   }
@@ -58,6 +94,12 @@ export class SimpleRouter {
 
     app.appendChild(tpl.content.cloneNode(true));
     
+    // Traducir contenido dinámicamente
+    this.translateContent();
+    
+    // Renderizar componentes dinámicos basados en config
+    initRenderers();
+    
     // Hook onMount para componentes interactivos
     if (typeof route.onMount === "function") {
       route.onMount(app);
@@ -71,15 +113,86 @@ export class SimpleRouter {
         routeId: route.templateId 
       } 
     }));
+    
+    // Scroll al top con smooth behavior
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
-    // NUEVO: Disparar evento route:mounted después de renderizar
-    // Esto permite que otros componentes se inicialicen por vista
-    window.dispatchEvent(new CustomEvent("route:mounted", { 
-      detail: { 
-        path: path,
-        routeId: route.templateId 
-      } 
-    }));
+  /**
+   * Traduce elementos con atributo data-i18n
+   */
+  translateContent() {
+    // Traducir elementos con data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      el.textContent = t(key);
+    });
+
+    // Traducir elementos con data-config (valores de configuración)
+    document.querySelectorAll('[data-config]').forEach(el => {
+      const key = el.dataset.config;
+      const value = i18n.getConfig(`config.${key}`);
+      if (value !== undefined) {
+        el.textContent = value;
+      }
+    });
+
+    // Traducir elementos con data-guide (valores guía/ejemplo)
+    document.querySelectorAll('[data-guide]').forEach(el => {
+      const key = el.dataset.guide;
+      const value = t(key);
+      if (value && value !== key) {
+        el.textContent = value;
+      }
+    });
+
+    // Traducir placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.dataset.i18nPlaceholder;
+      el.placeholder = t(key);
+    });
+
+    // Traducir aria-labels
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+      const key = el.dataset.i18nAria;
+      el.setAttribute('aria-label', t(key));
+    });
+
+    // Actualizar meta tags
+    document.title = t('meta.title');
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.content = t('meta.description');
+    }
+
+    // Actualizar links internos con el idioma actual
+    this.updateInternalLinks();
+  }
+
+  /**
+   * Actualiza links internos con el prefijo de idioma correcto
+   * SOLO en el contenido dinámico (#app), NO en el nav principal
+   */
+  updateInternalLinks() {
+    const currentLang = i18n.getLanguage();
+    
+    // IMPORTANTE: Solo actualizar links dentro de #app (contenido dinámico)
+    // NO tocar los enlaces del header/nav que se manejan por separado
+    const app = document.getElementById('app');
+    if (!app) return;
+    
+    app.querySelectorAll('a[href^="#/"]').forEach(link => {
+      const href = link.getAttribute('href');
+      const langMatch = href.match(/^#\/(es|en)\//);
+      
+      if (!langMatch) {
+        // No tiene idioma → agregarlo
+        const path = href.replace('#/', '');
+        const newHref = path ? `#/${currentLang}/${path}` : `#/${currentLang}/`;
+        link.setAttribute('href', newHref);
+      }
+      // Si ya tiene idioma, mantenerlo para permitir navegación correcta
+    });
   }
 
   updateActiveNav(currentHash) {

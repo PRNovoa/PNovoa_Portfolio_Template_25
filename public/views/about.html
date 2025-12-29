@@ -1,142 +1,188 @@
 <template id="view-about">
-  <div class="min-h-screen py-20 gradient-purple-blue">
+  <div class="min-h-screen gradient-purple-blue">
     <div class="container mx-auto px-4">
       
       <!-- Header -->
-      <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">Sobre mí</h1>
-        <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+      <div class="text-center pt-20 pb-12">
+        <h1 class="text-fluid-h1 font-bold mb-4" style="color: #F7F3FF;" data-i18n="about.title">Sobre mí</h1>
+        <p class="text-fluid-body-lg max-w-2xl mx-auto" style="color: #C9C1D9;" data-i18n="about.subtitle">
           Desarrollador Frontend apasionado por crear experiencias web excepcionales
         </p>
       </div>
 
-      <!-- Bio + Foto -->
-      <div class="max-w-5xl mx-auto mb-20">
-        <div class="glass-card rounded-2xl p-8 md:p-12">
-          <div class="grid md:grid-cols-3 gap-8 items-center">
-            <!-- Foto Placeholder -->
-            <div class="aspect-square rounded-2xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center">
-              <span class="text-8xl">👨‍💻</span>
-            </div>
-            <!-- Bio -->
-            <div class="md:col-span-2">
-              <h2 class="text-3xl font-bold mb-4">¡Hola! Soy Pablo</h2>
-              <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
-                Desarrollador Frontend con más de 3 años de experiencia creando aplicaciones web modernas 
-                y responsive. Me especializo en transformar diseños en código limpio y eficiente.
-              </p>
-              <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
-                Mi stack principal incluye HTML5, CSS3, JavaScript (ES6+), React, Vue, Tailwind CSS y GSAP. 
-                Además, tengo experiencia con herramientas como Git, Vite, Webpack y metodologías ágiles.
-              </p>
-              <p class="text-lg text-slate-600 dark:text-slate-400">
-                Cuando no estoy programando, me gusta aprender nuevas tecnologías, contribuir a proyectos 
-                open source y mantenerme al día con las últimas tendencias del desarrollo web.
-              </p>
+      <!-- Bio Section -->
+      <section class="about-section about-section-bio py-16">
+        <div class="max-w-5xl mx-auto">
+          <div id="open-cv-modal" class="glass-card rounded-2xl p-8 md:p-12 cursor-pointer hover:scale-[1.02] transition-all duration-300" style="box-shadow: 0 0 30px rgba(255, 113, 206, 0.3);" role="button" tabindex="0" aria-label="Ver curriculum vitae completo">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+              <!-- Foto Placeholder with Parallax -->
+              <div class="bio-photo-parallax aspect-square rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #FF71CE 0%, #B967FF 50%, #01CDFE 100%); box-shadow: 0 0 40px rgba(255, 113, 206, 0.4);">
+                <span class="text-8xl">👨‍💻</span>
+              </div>
+              <!-- Bio -->
+              <div class="md:col-span-2">
+                <h2 class="text-fluid-h2 font-bold mb-4" style="color: #F7F3FF;" data-i18n="about.intro">¡Hola! Soy Pablo</h2>
+                <p class="text-fluid-body mb-4" style="color: #C9C1D9;" data-i18n="about.text1">
+                  Desarrollador Frontend con más de 3 años de experiencia creando aplicaciones web modernas 
+                  y responsive. Me especializo en transformar diseños en código limpio y eficiente.
+                </p>
+                <p class="text-fluid-body mb-4" style="color: #C9C1D9;" data-i18n="about.text2">
+                  Mi stack principal incluye HTML5, CSS3, JavaScript (ES6+), React, Vue, Tailwind CSS y GSAP. 
+                  Además, tengo experiencia con herramientas como Git, Vite, Webpack y metodologías ágiles.
+                </p>
+                <p class="text-fluid-body" style="color: #C9C1D9;" data-i18n="about.text3">
+                  Cuando no estoy programando, me gusta aprender nuevas tecnologías, contribuir a proyectos 
+                  open source y mantenerme al día con las últimas tendencias del desarrollo web.
+                </p>
+                <p class="text-sm mt-4 flex items-center gap-2" style="color: #FF71CE;">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                  <span data-i18n="about.cv.button">Ver CV Completo</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Skills Section -->
-      <div class="max-w-6xl mx-auto mb-20">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Habilidades</h2>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Frontend -->
-          <div class="glass-card rounded-2xl p-8">
-            <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
-              <span class="text-3xl">🎨</span>
-              Frontend
-            </h3>
-            <div class="flex flex-wrap gap-3">
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">HTML5</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">CSS3</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">JavaScript</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">TypeScript</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">React</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">Vue.js</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">Tailwind CSS</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">GSAP</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">SASS/SCSS</span>
+      <section class="about-section about-section-skills py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" style="color: #F7F3FF;" data-i18n="about.skills.title">Habilidades</h2>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Frontend Card -->
+            <div class="skills-card glass-card rounded-2xl p-6 md:p-8 hover:scale-[1.02] transition-all duration-300" style="border: 1px solid rgba(255, 113, 206, 0.3);">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl" style="background: linear-gradient(135deg, rgba(255, 113, 206, 0.2), rgba(185, 103, 255, 0.2)); box-shadow: 0 0 20px rgba(255, 113, 206, 0.3);">
+                  🎨
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold" style="color: #F7F3FF;" data-i18n="about.skills.frontend">Frontend</h3>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-pill" style="--pill-color: #FF71CE;">HTML5</span>
+                <span class="skill-pill" style="--pill-color: #01CDFE;">CSS3</span>
+                <span class="skill-pill" style="--pill-color: #FFE66D;">JavaScript</span>
+                <span class="skill-pill" style="--pill-color: #B967FF;">TypeScript</span>
+                <span class="skill-pill" style="--pill-color: #61DAFB;">React</span>
+                <span class="skill-pill" style="--pill-color: #4FC08D;">Vue.js</span>
+                <span class="skill-pill" style="--pill-color: #38BDF8;">Tailwind CSS</span>
+                <span class="skill-pill" style="--pill-color: #88CE02;">GSAP</span>
+                <span class="skill-pill" style="--pill-color: #CC6699;">SASS/SCSS</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Tools -->
-          <div class="glass-card rounded-2xl p-8">
-            <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
-              <span class="text-3xl">🛠️</span>
-              Herramientas
-            </h3>
-            <div class="flex flex-wrap gap-3">
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">Git / GitHub</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">Vite</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">Webpack</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">npm / pnpm</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">Figma</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">VS Code</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">Chrome DevTools</span>
-              <span class="px-4 py-2 glass-button rounded-full text-sm font-medium">Postman</span>
+            <!-- Tools Card -->
+            <div class="skills-card glass-card rounded-2xl p-6 md:p-8 hover:scale-[1.02] transition-all duration-300" style="border: 1px solid rgba(1, 205, 254, 0.3);">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl" style="background: linear-gradient(135deg, rgba(1, 205, 254, 0.2), rgba(185, 103, 255, 0.2)); box-shadow: 0 0 20px rgba(1, 205, 254, 0.3);">
+                  🛠️
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold" style="color: #F7F3FF;" data-i18n="about.skills.tools">Herramientas</h3>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-pill" style="--pill-color: #F05032;">Git</span>
+                <span class="skill-pill" style="--pill-color: #BD34FE;">Vite</span>
+                <span class="skill-pill" style="--pill-color: #8DD6F9;">Webpack</span>
+                <span class="skill-pill" style="--pill-color: #CB3837;">npm</span>
+                <span class="skill-pill" style="--pill-color: #F24E1E;">Figma</span>
+                <span class="skill-pill" style="--pill-color: #007ACC;">VS Code</span>
+                <span class="skill-pill" style="--pill-color: #4285F4;">DevTools</span>
+                <span class="skill-pill" style="--pill-color: #FF6C37;">Postman</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Timeline -->
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Experiencia</h2>
-        
-        <div class="space-y-6">
-          <!-- Timeline Item 1 -->
-          <div class="glass-card rounded-2xl p-6 md:p-8">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <h3 class="text-2xl font-bold">Frontend Developer</h3>
-              <span class="text-purple-600 dark:text-purple-400 font-medium">2023 - Presente</span>
+      <!-- Experience Section -->
+      <section class="about-section about-section-experience py-16">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" style="color: #F7F3FF;" data-i18n="about.experience.title">Experiencia</h2>
+          
+          <div class="relative">
+            <!-- Vertical Timeline Line -->
+            <div class="experience-timeline-line absolute left-4 md:left-8 top-0 bottom-0 w-0.5" style="background: linear-gradient(to bottom, #FF71CE, #B967FF, #01CDFE);"></div>
+            
+            <div class="space-y-6 relative">
+            <!-- Timeline Item 1 -->
+            <div class="experience-accordion-item glass-card rounded-2xl overflow-hidden transition-all duration-300">
+              <button class="experience-header w-full p-4 md:p-5 text-left flex items-center gap-4">
+                <div class="experience-marker flex-shrink-0 w-8 h-8 rounded-full relative z-10" style="background: linear-gradient(135deg, #FF71CE, #B967FF); box-shadow: 0 0 20px rgba(255, 113, 206, 0.6);"></div>
+                <div class="flex-1 min-w-0 pr-2">
+                  <h3 class="text-lg md:text-xl font-bold mb-1" style="color: #F7F3FF;" data-i18n="about.experience.job1.title">Frontend Developer</h3>
+                  <span class="font-medium text-sm" style="color: #FF71CE;" data-i18n="about.experience.job1.period">2023 - Presente</span>
+                </div>
+                <svg class="accordion-icon w-5 h-5 md:w-6 md:h-6 flex-shrink-0 transition-transform" style="color: #FF71CE;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="experience-content pl-16 md:pl-20 pr-6 md:pr-8 pb-4 md:pb-6">
+                <p class="experience-company text-base md:text-lg font-medium mb-2" style="color: #8D84A8;" data-i18n="about.experience.job1.company">Empresa Tech S.L.</p>
+                <p class="experience-description text-sm md:text-base" style="color: #C9C1D9;" data-i18n="about.experience.job1.description">
+                  Desarrollo de aplicaciones web con React y Vue.js. Implementación de diseños responsive 
+                  y optimización de rendimiento. Colaboración en equipo usando metodologías ágiles.
+                </p>
+              </div>
             </div>
-            <p class="text-lg font-medium text-slate-600 dark:text-slate-400 mb-2">Empresa Tech S.L.</p>
-            <p class="text-slate-600 dark:text-slate-400">
-              Desarrollo de aplicaciones web con React y Vue.js. Implementación de diseños responsive 
-              y optimización de rendimiento. Colaboración en equipo usando metodologías ágiles.
-            </p>
-          </div>
 
-          <!-- Timeline Item 2 -->
-          <div class="glass-card rounded-2xl p-6 md:p-8">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <h3 class="text-2xl font-bold">Junior Frontend Developer</h3>
-              <span class="text-purple-600 dark:text-purple-400 font-medium">2022 - 2023</span>
+            <!-- Timeline Item 2 -->
+            <div class="experience-accordion-item glass-card rounded-2xl overflow-hidden transition-all duration-300">
+              <button class="experience-header w-full p-4 md:p-5 text-left flex items-center gap-4">
+                <div class="experience-marker flex-shrink-0 w-8 h-8 rounded-full relative z-10" style="background: linear-gradient(135deg, #B967FF, #01CDFE); box-shadow: 0 0 20px rgba(1, 205, 254, 0.6);"></div>
+                <div class="flex-1 min-w-0 pr-2">
+                  <h3 class="text-lg md:text-xl font-bold mb-1" style="color: #F7F3FF;" data-i18n="about.experience.job2.title">Junior Frontend Developer</h3>
+                  <span class="font-medium text-sm" style="color: #01CDFE;" data-i18n="about.experience.job2.period">2022 - 2023</span>
+                </div>
+                <svg class="accordion-icon w-5 h-5 md:w-6 md:h-6 flex-shrink-0 transition-transform" style="color: #01CDFE;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="experience-content pl-16 md:pl-20 pr-6 md:pr-8 pb-4 md:pb-6">
+                <p class="experience-company text-base md:text-lg font-medium mb-2" style="color: #8D84A8;" data-i18n="about.experience.job2.company">StartUp Innovadora</p>
+                <p class="experience-description text-sm md:text-base" style="color: #C9C1D9;" data-i18n="about.experience.job2.description">
+                  Maquetación de interfaces desde Figma. Integración con APIs REST. 
+                  Implementación de animaciones con GSAP y mejora de la experiencia de usuario.
+                </p>
+              </div>
             </div>
-            <p class="text-lg font-medium text-slate-600 dark:text-slate-400 mb-2">StartUp Innovadora</p>
-            <p class="text-slate-600 dark:text-slate-400">
-              Maquetación de interfaces desde Figma. Integración con APIs REST. 
-              Implementación de animaciones con GSAP y mejora de la experiencia de usuario.
-            </p>
-          </div>
 
-          <!-- Timeline Item 3 -->
-          <div class="glass-card rounded-2xl p-6 md:p-8">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <h3 class="text-2xl font-bold">Bootcamp Full Stack</h3>
-              <span class="text-purple-600 dark:text-purple-400 font-medium">2021 - 2022</span>
+            <!-- Timeline Item 3 -->
+            <div class="experience-accordion-item glass-card rounded-2xl overflow-hidden transition-all duration-300">
+              <button class="experience-header w-full p-4 md:p-5 text-left flex items-center gap-4">
+                <div class="experience-marker flex-shrink-0 w-8 h-8 rounded-full relative z-10" style="background: linear-gradient(135deg, #01CDFE, #B967FF); box-shadow: 0 0 20px rgba(185, 103, 255, 0.6);"></div>
+                <div class="flex-1 min-w-0 pr-2">
+                  <h3 class="text-lg md:text-xl font-bold mb-1" style="color: #F7F3FF;" data-i18n="about.experience.job3.title">Bootcamp Full Stack</h3>
+                  <span class="font-medium text-sm" style="color: #B967FF;" data-i18n="about.experience.job3.period">2021 - 2022</span>
+                </div>
+                <svg class="accordion-icon w-5 h-5 md:w-6 md:h-6 flex-shrink-0 transition-transform" style="color: #B967FF;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="experience-content pl-16 md:pl-20 pr-6 md:pr-8 pb-4 md:pb-6">
+                <p class="experience-company text-base md:text-lg font-medium mb-2" style="color: #8D84A8;" data-i18n="about.experience.job3.company">Coding Academy</p>
+                <p class="experience-description text-sm md:text-base" style="color: #C9C1D9;" data-i18n="about.experience.job3.description">
+                  Formación intensiva en desarrollo web. Proyectos prácticos con HTML, CSS, JavaScript, 
+                  React y Node.js. Desarrollo de portfolio y aplicaciones completas.
+                </p>
+              </div>
             </div>
-            <p class="text-lg font-medium text-slate-600 dark:text-slate-400 mb-2">Coding Academy</p>
-            <p class="text-slate-600 dark:text-slate-400">
-              Formación intensiva en desarrollo web. Proyectos prácticos con HTML, CSS, JavaScript, 
-              React y Node.js. Desarrollo de portfolio y aplicaciones completas.
-            </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- CTA -->
-      <div class="text-center mt-16">
-        <a href="#/contact" class="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300">
-          <span>Trabajemos juntos</span>
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-          </svg>
-        </a>
-      </div>
+      <!-- CTA Section -->
+      <section class="about-section-cta py-16">
+        <div class="text-center">
+          <a href="#/contact" class="inline-flex items-center px-8 py-4 rounded-full text-white font-bold hover:scale-105 transition-all duration-300" style="background: linear-gradient(to right, #FF71CE, #01CDFE); box-shadow: 0 0 30px rgba(255, 113, 206, 0.6);">
+            <span data-i18n="about.cta">Trabajemos juntos</span>
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
 
     </div>
   </div>

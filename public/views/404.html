@@ -1,25 +1,25 @@
 <template id="view-404">
-  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50 py-16">
+  <section class="min-h-screen flex items-center justify-center py-16" style="background: linear-gradient(135deg, #0B0B2E 0%, #1D1442 50%, #271B57 100%);">
     <div class="container mx-auto px-4 text-center">
       <div class="max-w-2xl mx-auto">
-        <h1 class="text-9xl font-black text-purple-600 mb-4">404</h1>
-        <h2 class="text-4xl font-bold text-gray-800 mb-6">Página No Encontrada</h2>
-        <p class="text-xl text-gray-600 mb-8">
+        <h1 class="text-fluid-display font-black mb-4" style="color: #FF71CE; filter: drop-shadow(0 0 30px rgba(255, 113, 206, 0.6));" data-i18n="error_404.title">404</h1>
+        <h2 class="text-fluid-h1 font-bold mb-6" style="color: #F7F3FF;" data-i18n="error_404.subtitle">Página No Encontrada</h2>
+        <p class="text-fluid-body-lg mb-8" style="color: #C9C1D9;" data-i18n="error_404.description">
           Lo sentimos, la página que buscas no existe o ha sido movida.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#/" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors inline-flex items-center justify-center">
+          <a href="#/" class="font-bold py-3 px-8 rounded-lg transition-all inline-flex items-center justify-center text-white hover:scale-105" style="background: linear-gradient(to right, #FF71CE, #B967FF); box-shadow: 0 0 25px rgba(255, 113, 206, 0.5);">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
             </svg>
-            Volver al Inicio
+            <span data-i18n="error_404.cta_home">Volver al Inicio</span>
           </a>
-          <a href="#/projects" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg transition-colors inline-flex items-center justify-center">
-            Ver Proyectos
+          <a href="#/projects" class="font-bold py-3 px-8 rounded-lg transition-all inline-flex items-center justify-center text-white hover:scale-105" style="background: linear-gradient(to right, #01CDFE, #B967FF); box-shadow: 0 0 25px rgba(1, 205, 254, 0.5);">
+            <span data-i18n="error_404.cta_projects">Ver Proyectos</span>
           </a>
         </div>
-        <div class="mt-12 text-gray-500">
-          <p class="text-sm">¿Necesitas ayuda? <a href="#/contact" class="text-purple-600 hover:underline">Contáctanos</a></p>
+        <div class="mt-12">
+          <p class="text-sm" style="color: #8D84A8;"><span data-i18n="error_404.help">¿Necesitas ayuda?</span> <a href="#/contact" class="hover:underline" style="color: #01CDFE;" data-i18n="error_404.contact_link">Contáctanos</a></p>
         </div>
       </div>
     </div>
